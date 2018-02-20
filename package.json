@@ -5,8 +5,8 @@
   "main": "dist/pdf-annotate.js",
   "scripts": {
     "test": "karma start --single-run",
-    "start": "./scripts/web",
-    "build": "MINIFY=1 webpack",
+    "start": "webpack-dev-server --port 10001 --progress --inline --config ./webpack.config.js --content-base ./docs ",
+    "build": "webpack",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "files": [
